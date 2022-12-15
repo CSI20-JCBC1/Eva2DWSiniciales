@@ -1,0 +1,35 @@
+﻿@page
+@model Eva2DWSiniciales.Pages.Insertar.InsertarModel
+@{
+    ViewData["Title"] = "Insertar";
+}
+<div>
+    <form method="post" class="d-flex justify-content-center " style="text-align: center">
+    <fieldset>
+        <legend>Insertar</legend>
+        <div>
+            <label for="cod_alumno"></label>
+                <input type="text" name="cod_alumno" value="" placeholder="Nombre alumno" />
+        </div>
+        <br />
+        <div>
+            <label for="nota_evaluacion"></label>
+                <input type="text" name="nota_evaluacion" value="" placeholder="Nota Evaluación" />
+        </div>
+            <br />
+        <div>
+            <label for="cod_evaluacion"></label>
+                <input type="text" name="cod_evaluacion" value="" placeholder="Evaluación" />
+        </div>
+            <br />
+        <div>
+            <label>&nbsp;</label>
+            <button type="submit" asp-page-handler="Submit" value=">" class="submit" >></button>
+        </div>
+        
+        <hr />
+          @Model.Mensaje
+    </fieldset>
+</form>
+
+</div>

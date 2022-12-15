@@ -1,0 +1,31 @@
+﻿@page
+@model Eva2DWSiniciales.Pages.SeleccionAlumno.SeleccionarModel
+@{
+    ViewData["Title"] = "SeleccionAlumno";
+}
+
+<form method="post" class="d-flex justify-content-center " style="text-align: center">
+    <fieldset>
+        <legend>Login</legend>
+        <div>
+            <label for="cod_alumno"></label>
+            <input type="text" name="cod_alumno" value="" placeholder="Nombre del alumno a consultar" />
+        </div>
+        <br />
+        <div>
+            <label for="cod_evaluacion"></label>
+            <input type="text" name="cod_evaluacion" value="" placeholder="Evaluación de la que quiere su nota" />
+        </div>
+        <br />
+        <div>
+            <label>&nbsp;</label>
+            <button type="submit" asp-page-handler="Submit" value=">" class="submit">></button>
+        </div>
+        <br />
+
+        <hr />
+
+        @Model.Mensaje @Model.Mensaje2
+    </fieldset>
+
+</form>
